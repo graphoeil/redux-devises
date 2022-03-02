@@ -25,7 +25,7 @@ export const fetchCountries = () => {
 export const fetchRateExchange = (country) => {
 	// Thunk
 	return function(dispatch){
-		axios.get(`http://api.exchangeratesapi.io/v1/${formatedDate(new Date())}?access_key=${API_KEY}
+		axios.get(`https://api.exchangeratesapi.io/v1/${formatedDate(new Date())}?access_key=${API_KEY}
 			& base = USD
 			& symbols = ${country.currencyCode}`).then((response) => {
 				// dispatch vers tous les reducers !!!
